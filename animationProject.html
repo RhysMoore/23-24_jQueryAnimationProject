@@ -6,13 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
-        .container{
-            background-image:
-        }
         #startButton{
-            width: 100px;
+            width: 180px;
             height: 50px;
-            background-color: green;
             position: absolute;
         }
         #childOne {
@@ -45,10 +41,16 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <p>Animation of the first verse of Welsh Nursery rhyme "Gee Ceffyl Bach" or "Gee Little Horse"</p>
             <div id="childOne"></div>
             <div id="childTwo"></div>
             <div id="horse"></div>
-            <div id="startButton"></div>
+            <div id="startButton">
+                <button class="btn btn-success">Gee Ceffyl Bach</button>
+            </div>
+            <div id="mtn">
+                <img src="img/mtn.jfif" alt="" height="500px">
+            </div>
         </div>
     </div>
 </div>
@@ -56,6 +58,32 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
+        $("#startButton").click(function(){
+            $("#horse").animate({
+                top: '+=-325px',
+                left: '+=200px',
+            });
+            $("#horse").animate({
+                top: '+=250px',
+                left: '+=190px',
+            });
+            $("#childOne").animate({
+                top: '+=-325px',
+                left: '+=200px',
+            });
+            $("#childOne").animate({
+                top: '+=250px',
+                left: '+=190px',
+            });
+            $("#childTwo").animate({
+                top: '+=-325px',
+                left: '+=200px',
+            });
+            $("#childTwo").animate({
+                top: '+=250px',
+                left: '+=190px',
+            });
+        });
     });
 </script>
 </html>
